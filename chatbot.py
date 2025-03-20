@@ -1,10 +1,12 @@
-# bot.py
-
 from chatterbot import ChatBot
-from chatterbot.trainers import ChatterBotCorpusTrainer
+import nltk
 
-chatbot = ChatBot("GameBot")
+nltk.download('punkt_tab')
 
+# Created ChatBot instance
+chatbot = ChatBot("ChatBot")
+
+# Created while loop for functionality and exit conditions
 exit_conditions = (":q", "quit", "exit")
 while True:
     query = input("> ")
